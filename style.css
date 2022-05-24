@@ -6,6 +6,7 @@
 
 html{
     height: 100vh;
+    background-color: antiquewhite;
 }
 
 h1{
@@ -13,10 +14,13 @@ h1{
     display: flex;
     justify-content: center;
     font-size: 50px;
+    background-color: firebrick;
+    color: white;
 }
 
 h2{
     font-family: 'Press Start 2P', cursive;
+    font-size: 18px;
 }
 
 h3{
@@ -28,6 +32,7 @@ p{
     font-size: 25px;
 }
 
+
 #container-all{
     display: flex;
     align-items: center;
@@ -35,7 +40,7 @@ p{
     height: 40vh;
 }
 
-#stats{
+#stats, #stats-container{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -44,6 +49,7 @@ p{
     border: black solid 1px;
     box-shadow: 0 8px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
+
 }
 
 #stats:hover{
@@ -55,4 +61,5 @@ p{
     position: absolute;
     width: 40%;
     left: 30%;
+    background-color: whitesmoke;
 }
