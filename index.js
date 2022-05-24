@@ -64,7 +64,6 @@ async function getPokemon () {
     // `;
 }
 
-
 //eventListener when click on button it gets the value from the input and print on poke-container (page was refreshing constantly, so I added a preventDefault)
     pokemonButton.addEventListener("click", (e) =>{
         let value = document.getElementById('pokemon-search-input').value;
