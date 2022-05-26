@@ -85,7 +85,7 @@ async function getPokemon () {
     function addImageTwo() {
         let pic = document.querySelector(".evoImageOne");
         let img = new Image(200, 200);
-        img.src = firstSprite.sprites.front_default;
+        img.src = firstSprite.sprites.other.home.front_default;
         pic.innerHTML = '';
         pic.appendChild(img);
     }
@@ -93,7 +93,7 @@ async function getPokemon () {
     function addImageThree() {
         let pic = document.querySelector(".evoSprites1");
         let img = new Image(200, 200);
-        img.src = secondSprite.sprites.front_default;
+        img.src = secondSprite.sprites.other.home.front_default;
         pic.innerHTML = '';
         pic.appendChild(img);
     }
@@ -101,7 +101,7 @@ async function getPokemon () {
      function addImageFour() {
         let pic = document.querySelector(".evoSprites2");
         let img = new Image(200, 200);
-        img.src = thirdSprite.sprites.front_default;
+        img.src = thirdSprite.sprites.other.home.front_default;
         pic.innerHTML = '';
         pic.appendChild(img);
     }
