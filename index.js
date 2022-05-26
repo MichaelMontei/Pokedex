@@ -13,6 +13,16 @@ async function getPokemon () {
     const evolveToPokemon = chainResponse.chain.species.name;
     const evolveToPokemonTwo = chainResponse.chain.evolves_to[0].species.name;
     const evolveToPokemonThree = chainResponse.chain.evolves_to[0].evolves_to[0].species.name;
+    let firstSpriteFetch = await fetch (`https://pokeapi.co/api/v2/pokemon/${response.name}`);
+    let firstSprite = await firstSpriteFetch.json();
+    let secondSpriteFetch = await fetch (`https://pokeapi.co/api/v2/pokemon/${chainResponse.chain.evolves_to[0].species.name}`);
+    let secondSprite = await secondSpriteFetch.json();
+    let thirdSpriteFetch =  await fetch(`https://pokeapi.co/api/v2/pokemon/${chainResponse.chain.evolves_to[0].evolves_to[0].species.name}`);
+    let thirdSprite = await thirdSpriteFetch.json();
+    console.log(firstSprite);
+    console.log(secondSprite);
+    console.log(thirdSprite);
+
     console.log(response);
     console.log(evolveToPokemon);
     console.log(evolveToPokemonTwo);
@@ -23,6 +33,7 @@ async function getPokemon () {
     pokemonsArr.push(evolveToPokemon);
     pokemonsArr.push(evolveToPokemonTwo);
     pokemonsArr.push(evolveToPokemonThree);
+
 
 
     if(evolveToPokemon){
@@ -43,6 +54,10 @@ async function getPokemon () {
 
     }
 
+
+
+
+
     //console.log(response);
     //console.log(response.name, response.id, response.sprites, response.abilities[0].ability.name, response.moves[0].move.name, response.types[0].type.name);
 
@@ -53,13 +68,40 @@ async function getPokemon () {
     document.querySelector(".abilities").innerHTML = "Abilties: " + response.abilities[0].ability.name;
 
     addImage();
+    addImageTwo();
+    addImageFour();
+    addImageThree();
     moves();
 
 
     function addImage() {
         let pic = document.querySelector(".sprites");
         let img = new Image(200, 200);
-        img.src = response.sprites.front_shiny;
+        img.src = response.sprites.other.home.front_default;
+        pic.innerHTML = '';
+        pic.appendChild(img);
+    }
+
+    function addImageTwo() {
+        let pic = document.querySelector(".evoImageOne");
+        let img = new Image(200, 200);
+        img.src = firstSprite.sprites.front_default;
+        pic.innerHTML = '';
+        pic.appendChild(img);
+    }
+
+    function addImageThree() {
+        let pic = document.querySelector(".evoSprites1");
+        let img = new Image(200, 200);
+        img.src = secondSprite.sprites.front_default;
+        pic.innerHTML = '';
+        pic.appendChild(img);
+    }
+
+     function addImageFour() {
+        let pic = document.querySelector(".evoSprites2");
+        let img = new Image(200, 200);
+        img.src = thirdSprite.sprites.front_default;
         pic.innerHTML = '';
         pic.appendChild(img);
     }

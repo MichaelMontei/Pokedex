@@ -6,7 +6,7 @@
 
 html{
     height: 100vh;
-    background-color: antiquewhite;
+    background-color: ghostwhite;
 }
 
 h1{
@@ -32,35 +32,24 @@ p{
     font-size: 25px;
 }
 
+#placer{
+    height: 100vh;
+}
 
 #container-all{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 40vh;
+    height: 30vh;
 }
 
-#stats, #stats-container{
+.stats{
+    text-align: center;
+    height: 45vh;
     display: flex;
-    align-items: center;
     justify-content: center;
-    height: 40vh;
     flex-direction: column;
-    border: black solid 1px;
-    box-shadow: 0 8px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
+    align-items: center;
 
-}
-
-#stats:hover{
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    background-color: whitesmoke;
-}
-
-#stats-container{
-    position: absolute;
-    width: 40%;
-    left: 30%;
-    background-color: whitesmoke;
 }
 
