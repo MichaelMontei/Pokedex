@@ -35,7 +35,7 @@
 	- Made different div's to insert all data 1 by 1 so that I can handle Moves, types etc of pokemon.
 
 - [X] Need to make a function to check if there is an evolution for the pokemon. 
-	-
-	-
+	- Made an if statement to check the different fetches.
+	- Then made variables to get the sprites for every evolution.
 
 
